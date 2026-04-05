@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-darker text-white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  background-size: 200% auto;
+  animation: gradient 3s linear infinite;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(10, 14, 39, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 217, 255, 0.1);
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.4), 0 0 40px rgba(168, 85, 247, 0.2);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(0, 217, 255, 0.6), 0 0 60px rgba(168, 85, 247, 0.4);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+/* Neon border */
+.neon-border {
+  border: 2px solid transparent;
+  background: linear-gradient(#0a0e27, #0a0e27) padding-box,
+              linear-gradient(135deg, #00d9ff, #a855f7, #10b981) border-box;
+}
+
+/* Animated gradient background */
+.gradient-bg {
+  background: linear-gradient(-45deg, #050816, #0a0e27, #1e1b4b, #0a0e27);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
