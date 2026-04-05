@@ -113,30 +113,30 @@ const Experience = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className="glass p-6 rounded-2xl glow-hover neon-border relative overflow-hidden group"
+                className="glass p-4 sm:p-6 rounded-2xl glow-hover neon-border relative overflow-hidden group"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
                 <div className="relative z-10">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-br ${exp.gradient}`}>
-                        <exp.icon className="text-2xl text-white" />
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                    <div className="flex items-start gap-3 sm:gap-4 flex-1">
+                      <div className={`p-2 sm:p-3 rounded-xl bg-gradient-to-br ${exp.gradient} flex-shrink-0`}>
+                        <exp.icon className="text-xl sm:text-2xl text-white" />
                       </div>
-                      <div>
-                        <h4 className="text-2xl font-bold gradient-text mb-1">{exp.title}</h4>
-                        <p className="text-xl text-gray-300">{exp.company}</p>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xl sm:text-2xl font-bold gradient-text mb-1 break-words">{exp.title}</h4>
+                        <p className="text-base sm:text-xl text-gray-300 break-words">{exp.company}</p>
                       </div>
                     </div>
-                    <span className="bg-primary/20 text-primary px-4 py-1 rounded-full text-sm border border-primary/30">
+                    <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs sm:text-sm border border-primary/30 self-start whitespace-nowrap">
                       {exp.type}
                     </span>
                   </div>
-                  <p className="text-gray-400 mb-4">{exp.period}</p>
+                  <p className="text-sm sm:text-base text-gray-400 mb-4">{exp.period}</p>
                   <ul className="space-y-2">
                     {exp.description.map((item, i) => (
                       <li key={i} className="flex items-start">
-                        <span className="text-primary mr-2 mt-1">▹</span>
-                        <span className="text-gray-300">{item}</span>
+                        <span className="text-primary mr-2 mt-1 flex-shrink-0">▹</span>
+                        <span className="text-sm sm:text-base text-gray-300">{item}</span>
                       </li>
                     ))}
                   </ul>

@@ -159,36 +159,36 @@ const Projects = () => {
               className="glass rounded-2xl overflow-hidden glow-hover group neon-border"
             >
               {/* Project Header */}
-              <div className={`bg-gradient-to-br ${project.gradient} p-6 relative`}>
+              <div className={`bg-gradient-to-br ${project.gradient} p-4 sm:p-6 relative`}>
                 {project.award && (
-                  <div className="absolute top-4 right-4 bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs border border-yellow-400/30 backdrop-blur-sm">
+                  <div className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-yellow-500/20 text-yellow-400 px-2 py-1 sm:px-3 sm:py-1 rounded-full text-[10px] sm:text-xs border border-yellow-400/30 backdrop-blur-sm whitespace-nowrap">
                     🏆 Award Winner
                   </div>
                 )}
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="p-3 bg-white/10 backdrop-blur-sm rounded-xl">
-                    <project.icon className={`text-3xl ${project.iconColor}`} />
+                <div className="flex items-start gap-3 sm:gap-4 mb-3 pr-20 sm:pr-24">
+                  <div className="p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-xl flex-shrink-0">
+                    <project.icon className={`text-2xl sm:text-3xl ${project.iconColor}`} />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white group-hover:scale-105 transition-transform">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:scale-105 transition-transform break-words">
                       {project.title}
                     </h3>
                   </div>
                 </div>
-                <p className="text-white/90 text-sm">{project.subtitle}</p>
+                <p className="text-white/90 text-xs sm:text-sm">{project.subtitle}</p>
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+              <div className="p-4 sm:p-6">
+                <p className="text-gray-400 text-sm sm:text-base mb-4 leading-relaxed">{project.description}</p>
 
                 {/* Features */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold gradient-text mb-2">Key Features:</h4>
+                  <h4 className="text-xs sm:text-sm font-semibold gradient-text mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {project.features.slice(0, 3).map((feature, i) => (
-                      <li key={i} className="text-gray-400 text-sm flex items-start">
-                        <span className="text-primary mr-2">▹</span>
+                      <li key={i} className="text-gray-400 text-xs sm:text-sm flex items-start">
+                        <span className="text-primary mr-2 flex-shrink-0">▹</span>
                         <span>{feature}</span>
                       </li>
                     ))}
