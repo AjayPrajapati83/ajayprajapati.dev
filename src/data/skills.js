@@ -1,0 +1,61 @@
+export const skillClusters = [
+  {
+    name: 'Cybersecurity',
+    color: '#00FFB2',
+    skills: ['Wazuh', 'SIEM', 'SOC L1', 'Phishing Analysis', 'Threat Intelligence', 'Incident Response', 'Log Analysis', 'Vulnerability Assessment', 'Network Security'],
+    description: 'Security operations, threat detection, and incident response',
+  },
+  {
+    name: 'Frontend',
+    color: '#0EA5E9',
+    skills: ['React', 'Next.js', 'Flutter', 'React Native', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    description: 'Modern web and mobile application development',
+  },
+  {
+    name: 'Networking',
+    color: '#F59E0B',
+    skills: ['OSI Model', 'TCP/IP', 'DNS', 'Subnetting', 'Wi-Fi Security', 'Firewall Config', 'VPN', 'Network Monitoring'],
+    description: 'Network architecture, protocols, and infrastructure',
+  },
+  {
+    name: 'AI & Automation',
+    color: '#A78BFA',
+    skills: ['Gemini API', 'Selenium', 'Python Scripting', 'Web Scraping', 'AI Chatbots', 'Automation'],
+    description: 'Artificial intelligence and workflow automation',
+  },
+  {
+    name: 'Tools & Platforms',
+    color: '#64748B',
+    skills: ['Git', 'VS Code', 'Firebase', 'Supabase', 'MS Office', 'VirtualBox', 'Ubuntu', 'Vercel'],
+    description: 'Development tools, cloud platforms, and environments',
+  },
+  {
+    name: 'Soft Skills',
+    color: '#FB7185',
+    skills: ['Leadership', 'Public Speaking', 'Documentation', 'Team Management', 'Mentoring', 'Research'],
+    description: 'Communication, leadership, and collaboration',
+  },
+]
+
+export const skillPills = [
+  { name: 'Python', color: '#00FFB2' },
+  { name: 'C++', color: '#0EA5E9' },
+  { name: 'Flutter', color: '#0EA5E9' },
+  { name: 'Next.js', color: '#0EA5E9' },
+  { name: 'React Native', color: '#0EA5E9' },
+  { name: 'Firebase', color: '#64748B' },
+  { name: 'Wazuh', color: '#00FFB2' },
+  { name: 'SIEM', color: '#00FFB2' },
+  { name: 'Gemini API', color: '#A78BFA' },
+  { name: 'Selenium', color: '#A78BFA' },
+  { name: 'Supabase', color: '#64748B' },
+  { name: 'TypeScript', color: '#0EA5E9' },
+  { name: 'Ubuntu', color: '#64748B' },
+  { name: 'VirtualBox', color: '#64748B' },
+  { name: 'Tailwind CSS', color: '#0EA5E9' },
+  { name: 'JavaScript', color: '#0EA5E9' },
+  { name: 'HTML5', color: '#0EA5E9' },
+  { name: 'Git', color: '#64748B' },
+  { name: 'React', color: '#0EA5E9' },
+  { name: 'Dart', color: '#0EA5E9' },
+]
