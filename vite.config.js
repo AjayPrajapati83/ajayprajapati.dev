@@ -9,21 +9,5 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('three') || id.includes('@react-three')) {
-              return 'three';
-            }
-            if (id.includes('gsap') || id.includes('framer-motion')) {
-              return 'animation';
-            }
-            return 'vendor';
-          }
-        },
-      },
-    },
   },
 })
