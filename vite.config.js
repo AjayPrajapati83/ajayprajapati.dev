@@ -12,9 +12,16 @@ export default defineConfig({
     minify: 'terser',
     rollupOptions: {
       output: {
-        manualChunks: {
-          three: ['three', '@react-three/fiber', '@react-three/drei'],
-          animation: ['gsap', 'framer-motion'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('three') || id.includes('@react-three')) {
+              return 'three';
+            }
+            if (id.includes('gsap') || id.includes('framer-motion')) {
+              return 'animation';
+            }
+            return 'vendor';
+          }
         },
       },
     },
